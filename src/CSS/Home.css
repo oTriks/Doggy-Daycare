@@ -1,0 +1,63 @@
+/* Ensure the header is aligned at the top and spans the full width */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #564A4A; 
+    padding: 10px 20px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 100; 
+  }
+  
+  /* Ensure the header content doesn't inherit text-align center from parent */
+  .header-left, .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo style for header */
+  .icon {
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  /* Title next to logo */
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Styling the right side of the header */
+  .header-right {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .headerText {
+    margin-right: 10px;
+    color: white;
+
+  }
+  
+  .divider {
+    width: 1px;
+    height: 20px;
+    background-color: white;
+    margin: 0 10px;
+  }
+  
+  .flags {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag {
+    width: 25px;
+    height: 15px;
+    margin-left: 10px;
+  }
