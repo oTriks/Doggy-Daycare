@@ -1,19 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import TestButton from './components/Home.jsx'
-import FetchDogData from './components/FetchDogData.jsx'
 
-function App() {
+import React from 'react';
+import Home from './components/Home.jsx'; 
+import './App.css';
 
+const App = () => {
   return (
-    <>
-      <TestButton/>
-      <FetchDogData/>
-
-    </>
-  )
+    <div className="App">
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;

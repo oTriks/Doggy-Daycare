@@ -1,20 +1,28 @@
-import { useEffect, useState } from "react";
+import React from 'react';
+import '../CSS/Home.css'; 
 
-const TestButton = () => {
-const [count, setCount] = useState(0);
-console.log("testbutton"); 
 
-useEffect(() => {
-    console.log('useEffect []');
-}, [])
 
-return (
-    <div>
-        <button onClick={() => setCount(count + 1)} >Tryck! </button>
-        {count}
-    </div>
-)
+const Home = () => {
+  return (
+    <header className="header">
+      <div className="header-left">
+      <img src="./assets/dogLogo.png" alt="Doggy Daycare Icon" className="icon" />
+      <h1 className="title">Doggy Daycare</h1>
+      </div>
 
+      <div className="header-right">
+        <span className="headerText">Specific Information</span>
+        <span className="divider"></span>
+        <span className="headerText">Catalog</span>
+
+        <div className="flags">
+        <img src="/assets/SWE.png" alt="Swedish Flag" className="flag" />
+        <img src="./assets/US.png" alt="American Flag" className="flag" />
+        </div>
+      </div>
+    </header>
+  );
 }
 
-export default TestButton; 
+export default Home;
