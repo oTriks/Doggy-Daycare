@@ -1,17 +1,32 @@
+/* src/CSS/Details.css */
 
-
-.specific-information {
+.details {
     padding: 20px;
-    margin-top: 7vh; /* Adjust for fixed header */
   }
   
-  .specific-information h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  .dog-details-card {
+    display: flex;
+    background-color: #726660;
+    border: 1px solid rgb(0, 0, 0)660;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 10px;
   }
   
-  .specific-information p {
-    font-size: 1rem;
-    line-height: 1.5;
+  .dog-details-card .dog-image {
+    width: 300px; /* Increased from 150px to 250px */
+    height: 300px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  .dog-info h3 {
+    margin-top: 0;
+  }
+  
+  .dog-info p {
+    margin: 5px 0;
   }
   

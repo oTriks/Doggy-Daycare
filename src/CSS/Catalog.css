@@ -1,0 +1,34 @@
+/* src/CSS/Catalog.css */
+
+.catalog {
+    padding: 20px;
+  }
+  
+  .dog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .dog-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .dog-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .dog-card h3 {
+    margin: 10px 0 0;
+  }
+  
