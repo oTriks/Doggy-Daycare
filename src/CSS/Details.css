@@ -1,32 +1,60 @@
 /* src/CSS/Details.css */
 
 .details {
-    padding: 20px;
+    padding: 5px;
   }
   
   .dog-details-card {
     display: flex;
     background-color: #726660;
-    border: 1px solid rgb(0, 0, 0)660;
-    border-radius: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 12px ;
     margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px;
   }
   
-  .dog-details-card .dog-image {
-    width: 300px; /* Increased from 150px to 250px */
-    height: 300px;
-    border-radius: 8px;
-    margin-right: 20px;
+  .dog-image-card {
+    display: flex;
+    background-color: #D9D9D9;
+    flex-direction: column;
+    border-radius: 12px;
+    align-items: center;
+    margin-right: 60px;
+    margin-left: 60px;
   }
   
+  .dog-image-card .dog-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+  }
   
+  .dog-image-card {
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  .dog-name {
+    color: #000000;
+
+  }
   
-  .dog-info h3 {
-    margin-top: 0;
+  .dog-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .dog-info h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #110101;
   }
   
   .dog-info p {
     margin: 5px 0;
+    color: #ffffff;
   }
   

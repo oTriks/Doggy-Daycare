@@ -26,6 +26,13 @@
     color: white;
   }
   
+/* Header-left styling */
+.header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+
   /* Right section of header */
   .header-right {
     display: flex;

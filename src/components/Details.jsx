@@ -51,16 +51,23 @@ const Details = () => {
             ref={(el) => (dogRefs.current[dog.chipNumber] = el)}
             className="dog-details-card"
           >
-            <img src={dog.img} alt={dog.name} className="dog-image" />
+            <div className="dog-image-card">
+              <img src={dog.img} alt={dog.name} className="dog-image" />
+              <h3 className="dog-name">{dog.name}</h3>
+            </div>
             <div className="dog-info">
-              <h3>{dog.name}</h3>
+              {/* Fact Section */}
+              <h4>Fact</h4>
               <p>Sex: {dog.sex}</p>
               <p>Breed: {dog.breed}</p>
               <p>Size: {dog.size}</p>
               <p>Age: {dog.age}</p>
               <p>Present: {dog.present ? 'Yes' : 'No'}</p>
               <p>Chip Number: {dog.chipNumber}</p>
-              <p>Owner: {dog.owner.name} {dog.owner.lastName}</p>
+
+              {/* Owner Section */}
+              <h4>Owner</h4>
+              <p>Name: {dog.owner.name} {dog.owner.lastName}</p>
               <p>Phone Number: {dog.owner.phoneNumber}</p>
             </div>
           </div>
