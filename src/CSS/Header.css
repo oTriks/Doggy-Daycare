@@ -1,0 +1,123 @@
+/* Header styling */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #564A4A; 
+    padding: 10px 70px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-sizing: border-box; 
+    z-index: 100;
+    height: 7vh;
+  }
+  
+  /* Logo and title styling */
+  .icon {
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Right section of header */
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerText {
+    padding: 20px;
+    margin-right: 0px;
+    color: white;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 20px;
+    background-color: white;
+    margin: 0 50px;
+  }
+  
+  .flags {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag {
+    width: 25px;
+    height: 15px;
+    margin-left: 10px;
+  }
+  
+  /* Hamburger menu styles */
+  .hamburger {
+    display: none; /* Hidden on desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: none;
+    margin-right: 20px;
+  }
+  
+  /* Mobile dropdown menu */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 7vh; /* Just below the header */
+    right: 20px;
+    background-color: #564A4A;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+  }
+  
+  .mobile-menu.active {
+    display: flex; /* Show the dropdown when active */
+  }
+  
+  .mobile-menu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .mobile-menu a:hover {
+    background-color: #4a3f3f;
+    border-radius: 5px;
+  }
+  
+  /* Responsive behavior for mobile devices */
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .header-right {
+      display: none; /* Hide specific information, catalog, and flags on mobile */
+    }
+  
+    .hamburger {
+      display: block; /* Show hamburger menu on mobile */
+    }
+  }
+  

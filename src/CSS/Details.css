@@ -1,0 +1,17 @@
+
+
+.specific-information {
+    padding: 20px;
+    margin-top: 7vh; /* Adjust for fixed header */
+  }
+  
+  .specific-information h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .specific-information p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
