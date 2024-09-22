@@ -6,16 +6,17 @@
   
   .dog-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
   }
   
   .dog-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background-color: #ffffffbb;
+    border: 1px solid #300101;
+    border-radius: 12px 12px 12px 12px;
+    width: 300px;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
   }
   
   .dog-card:hover {
@@ -23,12 +24,12 @@
   }
   
   .dog-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px 12px 0px 0px;
   }
   
   .dog-card h3 {
-    margin: 10px 0 0;
+    margin: 10px 10px;
   }
   
