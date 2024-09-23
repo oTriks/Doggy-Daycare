@@ -1,0 +1,46 @@
+
+.filter-size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-label {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .size-options-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .size-label {
+    color: #fff;
+  }
+  
+  .size-options {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .size-box {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .size-box.active {
+    background-color: #ccc;
+  }
+  
+  .size-box:hover {
+    background-color: #ddd;
+  }
+  

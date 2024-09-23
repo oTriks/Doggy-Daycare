@@ -1,0 +1,27 @@
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: calc(100vh - 1vh);
+  position: relative; 
+}
+
+.clear-filters {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.clear-filters button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #776969;
+  color: #fff;
+  border: 1px solid #776969;
+  cursor: pointer;
+}
+
+.clear-filters button:hover {
+  background-color: #5e5555;
+}

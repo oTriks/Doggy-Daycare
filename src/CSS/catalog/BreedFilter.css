@@ -1,0 +1,65 @@
+
+.filter-breed {
+    position: relative;
+    align-items: flex-start;
+  }
+  
+  .filter-breed label {
+    color: #fff;
+  }
+  
+  .breed-dropdown {
+    position: relative;
+  }
+  
+  .breed-dropdown-button {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #564A4A;
+    border: 1px solid #776969;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .breed-dropdown-button::after {
+    content: '▾';
+    float: right;
+    margin-right: 10px;
+  }
+  
+  .breed-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    width: 200px;
+    max-height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #564A4A;
+    border: 1px solid #776969;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .breed-option {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .breed-option:hover {
+    background-color: #776969;
+  }
+  
+  .breed-option input[type='checkbox'] {
+    margin-right: 8px;
+  }
+  
+  .breed-option .checkmark {
+    margin-left: auto;
+    color: green;
+  }
+  

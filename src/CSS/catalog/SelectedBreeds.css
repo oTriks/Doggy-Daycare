@@ -1,0 +1,109 @@
+
+.selected-breeds-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 30px 10px 0;
+    overflow: hidden;
+  }
+  
+  .selected-breeds {
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 2px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .selected-breeds .selected-breed,
+  .selected-breeds .ellipsis {
+    flex-shrink: 0;
+  }
+  
+  .selected-breeds .selected-breed {
+    padding: 5px;
+    background-color: rgba(253, 253, 253, 0.459);
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .selected-breeds .selected-breed button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .selected-breeds .selected-breed button:hover {
+    color: #000;
+  }
+  
+  .selected-breeds .ellipsis {
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  
+  .expanded-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .expanded-filters-content {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    max-width: 25%;
+    padding: 20px;
+    background-color: #ffffff86;
+    border-radius: 8px;
+  }
+  
+  .expanded-filters-content h3 {
+    margin-top: 0;
+  }
+  
+  .expanded-filters-content .selected-breeds.expanded {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .expanded-filters-content .selected-breed {
+    padding: 5px 10px;
+    background-color: rgba(253, 253, 253, 0.596);
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .expanded-filters-content .selected-breed button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .expanded-filters-content .selected-breed button:hover {
+    color: darkred;
+  }
+  
+  .expanded-filters-content button {
+    margin-top: 20px;
+  }
+  
