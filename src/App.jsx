@@ -12,6 +12,7 @@ const App = () => {
     <Router>
       <div className="App">
         <Header />
+        <div className="content">
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,6 +22,8 @@ const App = () => {
           <Route path="/details/:chipNumber" element={<Details />} /> 
         </Routes>
       </div>
+      </div>
+
     </Router>
   );
 }

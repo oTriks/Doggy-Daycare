@@ -12,7 +12,9 @@ body {
 }
 
 
-
+.content {
+  padding-top: 1vh; /* Adjust this value to match the height of your header */
+}
 
 
 

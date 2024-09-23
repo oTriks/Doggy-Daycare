@@ -1,9 +1,12 @@
+// src/components/Catalog.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/Catalog.css';
 
 const Catalog = () => {
   const [dogs, setDogs] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(''); // State for the search input
 
   useEffect(() => {
     // Fetch the dog data from the API
@@ -34,11 +37,33 @@ const Catalog = () => {
       .catch(error => console.error('Error fetching dog data:', error));
   }, []);
 
+  // Handler for search input
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  // Filter the dogs based on the search query
+  const filteredDogs = dogs.filter(dog =>
+    dog.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="catalog">
-      <h2>Our Dogs</h2>
+      {/* Search Bar */}
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Skriv hundens namn" // Swedish for "Write the dog's name"
+          value={searchQuery}
+          onChange={handleSearch}
+        />
+        {searchQuery && (
+      <button onClick={() => setSearchQuery('')}>Reset</button>
+      )}
+      </div>
+
       <div className="dog-grid">
-        {dogs.map((dog) => (
+        {filteredDogs.map((dog) => (
           <div key={dog.chipNumber} className="dog-card">
             <Link to={`/details/${dog.chipNumber}`}>
               <img src={dog.img} alt={dog.name} className="dog-image" />

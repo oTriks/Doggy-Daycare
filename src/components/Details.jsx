@@ -43,7 +43,6 @@ const Details = () => {
 
   return (
     <div className="details">
-      <h2>Dog Details</h2>
       <div className="dog-list">
         {dogs.map((dog) => (
           <div
