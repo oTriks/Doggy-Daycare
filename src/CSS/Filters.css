@@ -1,0 +1,13 @@
+/* src/CSS/Filters.css */
+
+/* FILTER SECTION STYLES */
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 300px 10px 200px;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
