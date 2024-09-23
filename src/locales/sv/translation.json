@@ -1,0 +1,24 @@
+{
+    "header": {
+      "specificInformation": "Specifik Information",
+      "catalog": "Katalog",
+      "title": "Doggy Daycare"
+    },
+    "details": {
+      "fact": "Fakta",
+      "sex": "Kön",
+      "breed": "Ras",
+      "size": "Storlek",
+      "age": "Ålder",
+      "present": "Närvarande",
+      "chipNumber": "Chipnummer",
+      "owner": "Ägare",
+      "name": "Namn",
+      "phoneNumber": "Telefonnummer"
+    },
+    "catalog": {
+    },
+    "home": {
+    }
+  }
+  
