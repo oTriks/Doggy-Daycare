@@ -1,7 +1,6 @@
-// src/components/SizeFilter.jsx
 
 import React from 'react';
-import '../CSS/SizeFilter.css';
+import '../../CSS/catalog/SizeFilter.css';
 
 const SizeFilter = ({ selectedSize, setSelectedSize }) => {
   return (

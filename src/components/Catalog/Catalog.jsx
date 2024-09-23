@@ -1,10 +1,9 @@
-// src/components/Catalog.jsx
 
 import React, { useState, useEffect } from 'react';
-import Filters from './Filters';
-import DogGrid from './Doggrid';
+import Filters from './Filters.jsx';
+import DogGrid from './Doggrid.jsx';
 import SelectedBreeds from './SelectedBreeds.jsx';
-import '../CSS/Catalog.css'; 
+import "../../CSS/catalog/Catalog.css";
 
 const Catalog = () => {
   const [dogs, setDogs] = useState([]);
@@ -16,7 +15,6 @@ const Catalog = () => {
   const [showAllFilters, setShowAllFilters] = useState(false);
 
   useEffect(() => {
-    // Fetch the dog data from the API
     fetch('https://api.jsonbin.io/v3/b/66ed5c53ad19ca34f8a985cc')
       .then((response) => {
         if (!response.ok) {
@@ -34,12 +32,10 @@ const Catalog = () => {
       .catch((error) => console.error('Error fetching dog data:', error));
   }, []);
 
-  // Remove breed from selected filters
   const removeBreed = (breedToRemove) => {
     setSelectedBreeds(selectedBreeds.filter((breed) => breed !== breedToRemove));
   };
 
-  // Check if any filter is selected
   const isAnyFilterSelected = () => {
     return (
       searchQuery !== '' ||
@@ -50,7 +46,6 @@ const Catalog = () => {
     );
   };
 
-  // Filter the dogs
   const filteredDogs = dogs.filter((dog) => {
     const matchesSearch = dog.name.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesSize =
@@ -60,7 +55,6 @@ const Catalog = () => {
     return matchesSearch && matchesSize && matchesAge && matchesBreed;
   });
 
-  // Clear all filters
   const handleClearFilters = () => {
     setSearchQuery('');
     setSelectedSize([]);
@@ -70,14 +64,12 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      {/* Clear All Filters Button */}
       {isAnyFilterSelected() && (
         <div className="clear-filters">
           <button onClick={handleClearFilters}>Clear All Filters</button>
         </div>
       )}
 
-      {/* Filters */}
       <Filters
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -90,7 +82,6 @@ const Catalog = () => {
         breeds={breeds}
       />
 
-      {/* Selected Breeds */}
       <SelectedBreeds
         selectedBreeds={selectedBreeds}
         removeBreed={removeBreed}
@@ -98,7 +89,6 @@ const Catalog = () => {
         setShowAllFilters={setShowAllFilters}
       />
 
-      {/* Dog Grid */}
       <DogGrid dogs={filteredDogs} />
     </div>
   );

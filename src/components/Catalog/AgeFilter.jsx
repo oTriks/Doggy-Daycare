@@ -1,8 +1,7 @@
-// src/components/AgeFilter.jsx
 
 import React from 'react';
 import ReactSlider from 'react-slider';
-import '../CSS/AgeFilter.css';
+import '../../CSS/catalog/AgeFilter.css';
 
 const AgeFilter = ({ ageRange, setAgeRange }) => {
   return (

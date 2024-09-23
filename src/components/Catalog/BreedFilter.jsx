@@ -1,13 +1,11 @@
-// src/components/BreedFilter.jsx
 
 import React, { useState, useEffect, useRef } from 'react';
-import '../CSS/BreedFilter.css';
+import '../../CSS/catalog/BreedFilter.css';
 
 const BreedFilter = ({ selectedBreeds, setSelectedBreeds, breeds }) => {
   const [breedDropdownOpen, setBreedDropdownOpen] = useState(false);
   const breedDropdownRef = useRef(null);
 
-  // Close breed dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (breedDropdownRef.current && !breedDropdownRef.current.contains(event.target)) {
@@ -20,7 +18,6 @@ const BreedFilter = ({ selectedBreeds, setSelectedBreeds, breeds }) => {
     };
   }, []);
 
-  // Handle breed selection/deselection
   const handleBreedToggle = (breed) => {
     if (selectedBreeds.includes(breed)) {
       setSelectedBreeds(selectedBreeds.filter((b) => b !== breed));

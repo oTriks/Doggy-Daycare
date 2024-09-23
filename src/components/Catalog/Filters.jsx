@@ -1,10 +1,9 @@
-// src/components/Filters.jsx
 
 import React from 'react';
 import SizeFilter from './SizeFilter';
 import AgeFilter from './AgeFilter';
 import BreedFilter from './BreedFilter';
-import '../CSS/Filters.css'; // If you have any styles specific to Filters
+import '../../CSS/catalog/Filters.css'; 
 
 const Filters = ({
   selectedSize,

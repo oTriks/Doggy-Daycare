@@ -1,7 +1,7 @@
 #root {
-  width: 100%; /* Ensure it takes full width of the viewport */
-  margin: 0; /* Remove auto-centering */
-  padding: 0; /* Remove padding that might push content inward */
+  width: 100%; 
+  margin: 0; 
+  padding: 0; 
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 
 .content {
-  padding-top: 1vh; /* Adjust this value to match the height of your header */
+  padding-top: 1vh; 
 }
 
 

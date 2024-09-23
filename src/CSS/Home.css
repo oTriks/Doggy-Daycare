@@ -1,19 +1,17 @@
-/* Home page styles */
 .content {
-    margin-top: 7vh; /* Adjust for fixed header */
+    margin-top: 7vh; 
     padding: 0;
   }
   
   .homeDogImage {
     display: block;
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
     object-fit: cover;
     margin: 0;
     padding: 0;
   }
   
-  /* Map section styles */
   .map {
     display: block;
     width: 95%;
@@ -28,7 +26,6 @@
     margin-bottom: 20px;
   }
   
-  /* Centered text container */
   .centered-text-container {
     display: grid;
     justify-content: center;
@@ -51,7 +48,6 @@
     text-align: center;
   }
   
-  /* Address styling */
   .address {
     clear: both;
     margin: 10px;
@@ -60,7 +56,6 @@
     text-align: left;
   }
   
-  /* Responsive design for mobile */
   @media (max-width: 768px) {
     .homeDogImage {
       margin-top: 7vh;

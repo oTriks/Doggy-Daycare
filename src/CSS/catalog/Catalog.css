@@ -1,21 +1,12 @@
-/* src/CSS/Catalog.css */
 
-/* ===========================================
-   Catalog Component Stylesheet
-=========================================== */
-
-/* GENERAL STYLES */
-
-/* Catalog Container */
 .catalog {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  min-height: calc(100vh - 1vh); /* Adjust as needed */
-  position: relative; /* For selected breeds container positioning */
+  min-height: calc(100vh - 1vh);
+  position: relative; 
 }
 
-/* Clear All Filters Button */
 .clear-filters {
   position: absolute;
   top: 20px;

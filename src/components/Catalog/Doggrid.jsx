@@ -1,8 +1,7 @@
-// src/components/DogGrid.jsx
 
 import React from 'react';
 import DogCard from './Dogcard';
-import '../CSS/Doggrid.css'; // Create a separate CSS file for DogGrid
+import '../../CSS/catalog/Doggrid.css';
 
 const DogGrid = ({ dogs }) => {
   return (

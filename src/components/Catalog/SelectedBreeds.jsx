@@ -1,7 +1,6 @@
-// src/components/SelectedBreeds.jsx
 
 import React from 'react';
-import '../CSS/SelectedBreeds.css'; // Create a separate CSS file for SelectedBreeds
+import '../../CSS/catalog/SelectedBreeds.css'; 
 
 const SelectedBreeds = ({
   selectedBreeds,
@@ -32,7 +31,6 @@ const SelectedBreeds = ({
         </div>
       )}
 
-      {/* Expanded Filters Display */}
       {showAllFilters && (
         <div className="expanded-filters" onClick={() => setShowAllFilters(false)}>
           <div className="expanded-filters-content" onClick={(e) => e.stopPropagation()}>

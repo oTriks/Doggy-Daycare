@@ -16,7 +16,6 @@
 
   }
   
-  /* Logo and title styling */
   .icon {
     height: 40px;
     margin-right: 15px;
@@ -28,14 +27,12 @@
     color: white;
   }
   
-/* Header-left styling */
 .header-left {
     display: flex;
     align-items: center;
   }
   
 
-  /* Right section of header */
   .header-right {
     display: flex;
     align-items: center;
@@ -65,7 +62,6 @@
     margin-left: 10px;
   }
   
-  /* Hamburger menu styles */
   .hamburger {
     display: none; /* Hidden on desktop */
     font-size: 30px;
@@ -76,12 +72,11 @@
     margin-right: 20px;
   }
   
-  /* Mobile dropdown menu */
   .mobile-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 7vh; /* Just below the header */
+    top: 7vh; 
     right: 20px;
     background-color: #564A4A;
     padding: 10px 20px;
@@ -91,7 +86,7 @@
   }
   
   .mobile-menu.active {
-    display: flex; /* Show the dropdown when active */
+    display: flex; 
   }
   
   .mobile-menu a {
@@ -108,7 +103,6 @@
     border-radius: 5px;
   }
   
-  /* Responsive behavior for mobile devices */
   @media (max-width: 768px) {
     .header {
       padding: 10px 20px;
@@ -122,11 +116,11 @@
     }
   
     .header-right {
-      display: none; /* Hide specific information, catalog, and flags on mobile */
+      display: none; 
     }
   
     .hamburger {
-      display: block; /* Show hamburger menu on mobile */
+      display: block; 
     }
   }
   

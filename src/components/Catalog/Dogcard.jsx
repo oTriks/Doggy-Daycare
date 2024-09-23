@@ -1,8 +1,7 @@
-// src/components/DogCard.jsx
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../CSS/DogCard.css'; // Create a separate CSS file for DogCard
+import '../../CSS/catalog/DogCard.css'; 
 
 const DogCard = ({ dog }) => {
   return (

@@ -1,0 +1,33 @@
+.dog-fact-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .dog-fact-info h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #110101;
+  }
+  
+  .dog-fact-info p {
+    margin: 5px 0;
+    color: #ffffff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .dog-fact-info {
+      width: 100%;
+      margin-right: 0;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .dog-fact-info h4,
+    .dog-fact-info p {
+      text-align: center;
+    }
+  }
+  
