@@ -1,6 +1,14 @@
 /* src/CSS/Catalog.css */
 
-/* General Styles */
+/* ===========================================
+   Catalog Component Stylesheet
+=========================================== */
+
+/* -------------------------------------------
+   GENERAL STYLES
+------------------------------------------- */
+
+/* Catalog Container */
 .catalog {
   display: flex;
   flex-direction: column;
@@ -9,6 +17,7 @@
   position: relative; /* For selected breeds container positioning */
 }
 
+/* Search Bar */
 .search-bar {
   margin-bottom: 20px;
   text-align: center;
@@ -23,22 +32,24 @@
   border-radius: 8px;
 }
 
-/* Reset Button */
 .search-bar button {
   padding: 8px 12px;
+  margin-left: 10px;
   font-size: 14px;
   background-color: #f0f0f0;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .search-bar button:hover {
   background-color: #e0e0e0;
 }
 
-/* Dog Grid Styles */
+/* -------------------------------------------
+   DOG GRID STYLES
+------------------------------------------- */
+
 .dog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
@@ -46,13 +57,14 @@
   justify-content: center;
 }
 
+/* Dog Card */
 .dog-card {
+  width: 240px;
+  padding: 0;
   background-color: #ffffffbb;
   border: 1px solid #300101;
   border-radius: 12px;
   text-align: center;
-  padding: 0;
-  width: 240px;
 }
 
 .dog-card:hover {
@@ -70,18 +82,20 @@
   margin: 10px;
 }
 
-/* Filter Section Styles */
+/* -------------------------------------------
+   FILTER SECTION STYLES
+------------------------------------------- */
+
 .filter-section {
   display: flex;
-  justify-content: space-between; /* Space the sections evenly */
-  align-items: flex-start; /* Align the sections vertically at the top */
-  margin-left: 200px;
-  margin-right: 300px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 300px 10px 200px;
   border-radius: 8px;
   color: #fff;
 }
 
+/* Filter Components */
 .filter-size,
 .filter-age,
 .filter-breed {
@@ -90,12 +104,9 @@
   gap: 10px;
 }
 
-/* Size Filter Styles */
+/* Size Filter */
 .filter-size {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
 }
 
 .filter-size .filter-label {
@@ -118,7 +129,6 @@
   gap: 5px;
 }
 
-/* Size Box Styles */
 .size-box {
   width: 40px;
   height: 40px;
@@ -137,7 +147,7 @@
   background-color: #ddd;
 }
 
-/* Age Slider Styles */
+/* Age Slider */
 .filter-age {
   align-items: center;
 }
@@ -147,31 +157,31 @@
 }
 
 .age-slider {
-  width: 300px; /* Adjust as needed */
+  width: 300px;
   height: 20px;
 }
 
 .age-slider .thumb {
-  background-color: #7e7c7c;
-  color: #000;
   width: 30px;
   height: 30px;
+  background-color: #7e7c7c;
+  color: #000;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .age-slider .track {
-  background-color: #470000;
   height: 6px;
+  background-color: #470000;
 }
 
 .age-slider .track-1 {
   background-color: #888;
 }
 
-/* Breed Filter Styles */
+/* Breed Filter */
 .filter-breed {
   position: relative;
   align-items: flex-start;
@@ -186,14 +196,14 @@
 }
 
 .breed-dropdown-button {
+  width: 200px;
   padding: 8px;
   font-size: 14px;
-  border-radius: 5px;
-  border: 1px solid #776969;
-  background-color: #564A4A;
-  cursor: pointer;
-  width: 200px;
   text-align: left;
+  background-color: #564A4A;
+  border: 1px solid #776969;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .breed-dropdown-button::after {
@@ -207,12 +217,12 @@
   top: 100%;
   right: 0;
   z-index: 1;
+  width: 200px;
   max-height: 200px;
+  padding: 10px;
   overflow-y: auto;
   background-color: #564A4A;
   border: 1px solid #776969;
-  padding: 10px;
-  width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -227,7 +237,7 @@
   background-color: #776969;
 }
 
-.breed-option input[type="checkbox"] {
+.breed-option input[type='checkbox'] {
   margin-right: 8px;
 }
 
@@ -236,7 +246,10 @@
   color: green;
 }
 
-/* Clear All Filters Button */
+/* -------------------------------------------
+   CLEAR ALL FILTERS BUTTON
+------------------------------------------- */
+
 .clear-filters {
   position: absolute;
   top: 20px;
@@ -253,85 +266,85 @@
 }
 
 .clear-filters button:hover {
-  background-color: #776969;
+  background-color: #5e5555;
 }
 
-/* Selected Breeds Container */
+/* -------------------------------------------
+   SELECTED BREEDS CONTAINER
+------------------------------------------- */
+
 .selected-breeds-container {
   display: flex;
-  justify-content: flex-end; /* Align to the right */
-  margin-right: 30px;
-  margin-bottom: 10px;
-  overflow: hidden; /* Prevents the container from expanding */
+  justify-content: flex-end;
+  margin: 0 30px 10px 0;
+  overflow: hidden;
 }
 
 .selected-breeds {
   display: flex;
+  position: relative;
   flex-wrap: nowrap;
   gap: 2px;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
 }
+
 .selected-breeds .selected-breed,
 .selected-breeds .ellipsis {
   flex-shrink: 0;
 }
 
 .selected-breeds .selected-breed {
+  padding: 5px;
   background-color: rgba(253, 253, 253, 0.459);
   color: #000;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 5px; 
   display: inline-flex;
   align-items: center;
-  flex-shrink: 0; 
-
 }
 
 .selected-breeds .selected-breed button {
   background: none;
   border: none;
-  
-  color: rgb(0, 0, 0);
-  cursor: pointer;
+  color: #000;
   font-size: 14px;
-  
+  cursor: pointer;
 }
 
 .selected-breeds .selected-breed button:hover {
-  color: rgb(0, 0, 0);
-  
+  color: #000;
 }
 
 .selected-breeds .ellipsis {
+  color: #000;
   cursor: pointer;
   user-select: none;
-  color: rgb(0, 0, 0); /* Ensure it's visible */
 }
 
-/* Expanded Filters Display */
+/* -------------------------------------------
+   EXPANDED FILTERS DISPLAY
+------------------------------------------- */
+
 .expanded-filters {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal Content */
 .expanded-filters-content {
   position: absolute;
   top: 50%;
-  right: 50px; /* Adjust this value to create space on the right */
+  right: 50px; 
   transform: translateY(-50%);
-  background-color: #ffffff86;
-  padding: 20px;
-  border-radius: 8px;
   max-width: 25%;
+  padding: 20px;
+  background-color: #ffffff86;
+  border-radius: 8px;
 }
 
 .expanded-filters-content h3 {
@@ -339,16 +352,17 @@
 }
 
 .expanded-filters-content .selected-breeds.expanded {
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .expanded-filters-content .selected-breed {
+  padding: 5px 10px;
   background-color: rgba(253, 253, 253, 0.596);
   color: #000;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 5px 10px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -357,9 +371,9 @@
 .expanded-filters-content .selected-breed button {
   background: none;
   border: none;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
+  color: #000;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .expanded-filters-content .selected-breed button:hover {
@@ -370,8 +384,10 @@
   margin-top: 20px;
 }
 
+/* -------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+------------------------------------------- */
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .filter-section {
     flex-direction: column;
@@ -384,18 +400,9 @@
     align-items: center;
   }
 
-  .filter-breed {
-    width: 100%;
-  }
-
-  .breed-dropdown-button {
-    width: 100%;
-  }
-
-  .breed-dropdown-menu {
-    width: 100%;
-  }
-
+  .filter-breed,
+  .breed-dropdown-button,
+  .breed-dropdown-menu,
   .age-slider {
     width: 100%;
   }
