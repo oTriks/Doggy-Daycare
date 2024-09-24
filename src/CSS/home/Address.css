@@ -1,0 +1,16 @@
+
+.address-container {
+    clear: both;
+    margin: 10px;
+    font-size: 0.9rem;
+    color: white;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .address-container {
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 10px auto;
+    }
+}

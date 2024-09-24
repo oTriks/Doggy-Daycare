@@ -1,0 +1,17 @@
+
+.hamburger {
+    display: none; 
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: none;
+    margin-right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; 
+    }
+  }
+  

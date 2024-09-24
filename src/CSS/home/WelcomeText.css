@@ -1,0 +1,39 @@
+
+.centered-text-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    max-width: 50%;
+    margin: 40px auto 10px;
+}
+
+.centered-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.smaller-centered-text {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .centered-text-container {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .centered-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .smaller-centered-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+}

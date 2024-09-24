@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home.jsx'; 
+import Home from './components/Home/Home.jsx'; 
 import Catalog from './components/Catalog/Catalog.jsx';
-import Header from './components/Header.jsx';
+import Header from './components/Header/Header.jsx';
 import Details from "./components/Details/Details.jsx";
 import './App.css';
 

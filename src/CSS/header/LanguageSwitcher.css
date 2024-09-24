@@ -1,0 +1,12 @@
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag {
+    width: 25px;
+    height: 15px;
+    margin-left: 10px;
+  }
+  
