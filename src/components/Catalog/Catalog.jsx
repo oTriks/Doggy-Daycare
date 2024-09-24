@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import Filters from './Filters.jsx';
 import DogGrid from './Doggrid.jsx';
 import SelectedBreeds from './SelectedBreeds.jsx';
+import SearchBar from './SearchBar.jsx'; 
 import "../../CSS/catalog/Catalog.css";
 
 const Catalog = () => {
@@ -64,6 +64,8 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
       {isAnyFilterSelected() && (
         <div className="clear-filters">
           <button onClick={handleClearFilters}>Clear All Filters</button>
