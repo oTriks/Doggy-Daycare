@@ -8,11 +8,13 @@ import '../../CSS/home/Home.css';
 
 const Home = () => {
   return (
+    <div className="full-screen-container">
     <div className="home-container">
       <HomeImage />
       <Map />
       <WelcomeText />
       <Address />
+    </div>
     </div>
   );
 };

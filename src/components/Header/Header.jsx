@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next'; 
 import '../../CSS/header/Header.css'; 
@@ -26,7 +25,7 @@ const Header = () => {
 
       <div className="header-right">
         <NavigationLinks closeMenu={closeMenu} />
-        <LanguageSwitcher />
+        <LanguageSwitcher />  
       </div>
 
       <HamburgerMenu toggleMenu={toggleMenu} />

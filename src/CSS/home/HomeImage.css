@@ -1,14 +1,18 @@
 
 .home-image-container {
-    margin-top: 7vh; 
     padding: 0;
+    margin: 0;
+    width: 100vw;
+    position: fixed;
+    top: 0;
 }
 
 .home-dog-image {
     display: block;
-    width: 100%;
-    height: auto; 
+    width: 100vw;
+    height: auto;
     object-fit: cover;
     margin: 0;
     padding: 0;
 }
+

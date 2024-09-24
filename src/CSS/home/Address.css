@@ -1,16 +1,18 @@
-
 .address-container {
-    clear: both;
-    margin: 10px;
+    position: fixed;  
+    bottom: 10px;        
+    left: 10px;          
     font-size: 0.9rem;
     color: white;
     text-align: left;
+
 }
 
 @media (max-width: 768px) {
     .address-container {
         font-size: 0.8rem;
-        text-align: center;
-        margin: 10px auto;
+        left: 10px;    /* Keep it left-aligned but adjust if necessary */
+        bottom: 10px;  /* Keep it 10px from the bottom */
+        text-align: left;  /* Maintain left alignment */
     }
 }
