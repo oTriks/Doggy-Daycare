@@ -44,3 +44,17 @@
     background-color: #ddd;
   }
   
+  @media (max-width: 768px) {
+    .size-box {
+      width: 30px; /* Smaller size on mobile */
+      height: 30px;
+    }
+  
+    .filter-label {
+      font-size: 12px; /* Smaller label font size */
+    }
+  
+    .size-options-container {
+      gap: 1px; /* Smaller gap between size boxes */
+    }
+  }

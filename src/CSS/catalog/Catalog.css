@@ -25,3 +25,19 @@
 .clear-filters button:hover {
   background-color: #5e5555;
 }
+
+@media (max-width: 768px) {
+  .catalog {
+    padding: 10px; /* Smaller padding for mobile */
+  }
+
+  .clear-filters {
+    top: 10px; /* Adjust the position */
+    right: 10px;
+  }
+
+  .clear-filters button {
+    font-size: 14px; /* Smaller button text */
+    padding: 6px 10px; /* Adjust button size */
+  }
+}

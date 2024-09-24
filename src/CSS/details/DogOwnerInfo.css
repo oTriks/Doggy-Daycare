@@ -16,7 +16,7 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .dog-owner-info {
       width: 100%;
       margin-right: 0;

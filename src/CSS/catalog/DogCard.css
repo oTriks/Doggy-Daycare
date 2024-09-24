@@ -23,3 +23,25 @@
     margin: 10px;
   }
   
+  @media (max-width: 1400px) {
+    .dog-card {
+      width: 170px; 
+    }
+    .dog-image {
+      width: 170px; 
+      height: 100px; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dog-card {
+      width: 130px; 
+    }
+    .dog-image {
+      width: 130px; 
+      height: 100px; 
+    }
+    .dog-card h3 {
+      font-size: 0.8rem; 
+    }
+  }

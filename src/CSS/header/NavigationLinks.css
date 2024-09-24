@@ -22,4 +22,8 @@
     background-color: white;
     margin: 0 50px;
   }
-  
+  @media (max-width: 768px) {
+    .navigation-links {
+    display: none;
+    }
+  }

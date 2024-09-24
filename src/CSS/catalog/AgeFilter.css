@@ -35,3 +35,9 @@
     background-color: #888;
   }
   
+  @media (max-width: 768px) {
+    .age-slider {
+      width: 300px; /* Smaller width on mobile */
+      height: 15px; /* Smaller slider */
+    }
+  }

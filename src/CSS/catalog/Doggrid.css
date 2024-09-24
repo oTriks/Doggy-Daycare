@@ -1,8 +1,24 @@
-
 .dog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
-    gap: 20px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust columns dynamically */
+  gap: 20px;
+  justify-content: center;
+  padding: 0 10px; /* Add padding to avoid content touching the edges */
+  box-sizing: border-box; /* Ensure padding and width are calculated correctly */
+}
+
+@media (max-width: 1400px) {
+  .dog-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on smaller screens */
+
+    gap: 15px; /* Smaller gap for smaller screens */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .dog-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on smaller screens */
+    gap: 5px; /* Smaller gap for mobile */
+    padding: 0 5px; /* Ensure padding for mobile */
+  }
+}

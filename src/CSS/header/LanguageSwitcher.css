@@ -11,3 +11,8 @@
     cursor: pointer; 
   }
   
+  @media (max-width: 768px) {
+    .language-switcher {
+      display: none;
+    }
+  }

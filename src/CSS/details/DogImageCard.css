@@ -10,7 +10,7 @@
   }
   
   .dog-image-card .dog-image {
-    width: 300px;
+    width: 320px;
     height: 300px;
     border-radius: 12px 12px 0 0;
     object-fit: cover;
@@ -22,11 +22,11 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .dog-image-card {
       margin-right: 0;
       margin-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
   
