@@ -17,7 +17,7 @@ const SelectedBreeds = ({
       {selectedBreeds.length > 0 && (
         <div className="selected-breeds-container">
           <div className="selected-breeds" onClick={() => setShowAllFilters(true)}>
-            {selectedBreeds.slice(0, 5).map((breed, index) => (
+            {selectedBreeds.slice(0, 4).map((breed, index) => (
               <span key={index} className="selected-breed" onClick={(e) => e.stopPropagation()}>
                 {breed}{' '}
                 <button
@@ -30,7 +30,7 @@ const SelectedBreeds = ({
                 </button>
               </span>
             ))}
-            {selectedBreeds.length > 5 && <span className="ellipsis">...{t('catalog.more')}</span>}
+            {selectedBreeds.length > 3 && <span className="ellipsis">...{t('catalog.more')}</span>}
           </div>
         </div>
       )}
