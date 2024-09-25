@@ -1,10 +1,9 @@
-
 .catalog {
   display: flex;
   flex-direction: column;
   padding: 20px;
   min-height: calc(100vh - 1vh);
-  position: relative; 
+  position: relative;
 }
 
 .clear-filters {
@@ -26,6 +25,37 @@
   background-color: #5e5555;
 }
 
+/* Wrapper for search bar and filter button */
+.search-and-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative; /* For centering the entire container */
+}
+
+/* Search bar wrapper */
+.search-bar-position {
+  display: flex;
+  justify-content: center;  /* Ensures the search bar stays centered */
+  max-width: 400px;
+  margin-right: 30px;      /* Adds a margin to the right for spacing */
+}
+
+/* Filter button styles */
+.filter-button {
+  padding: 10px 20px;
+  background-color: #5a5a5a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #777777;
+}
+
 @media (max-width: 768px) {
   .catalog {
     padding: 10px; /* Smaller padding for mobile */
@@ -39,5 +69,15 @@
   .clear-filters button {
     font-size: 14px; /* Smaller button text */
     padding: 6px 10px; /* Adjust button size */
+  }
+
+  /* Stack the search bar and filter button vertically on mobile */
+  .search-and-filter-container {
+    flex-direction: column;
+    gap: 10px; /* Adds space between the stacked elements */
+  }
+
+  .filter-button {
+    width: 100%; /* Makes the filter button full width on mobile */
   }
 }

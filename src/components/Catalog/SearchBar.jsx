@@ -14,9 +14,6 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
         value={searchQuery}
         onChange={handleSearch}
       />
-      {searchQuery && (
-        <button onClick={() => setSearchQuery('')}>Reset</button>
-      )}
     </div>
   );
 };

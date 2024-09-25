@@ -13,6 +13,7 @@ const Catalog = () => {
   const [selectedBreeds, setSelectedBreeds] = useState([]);
   const [breeds, setBreeds] = useState([]);
   const [showAllFilters, setShowAllFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(false); 
 
   useEffect(() => {
     fetch('https://api.jsonbin.io/v3/b/66ed5c53ad19ca34f8a985cc')
@@ -62,27 +63,46 @@ const Catalog = () => {
     setSelectedBreeds([]);
   };
 
+  const toggleFilters = () => {
+    setShowFilters(!showFilters); // Toggle the filter pop-up
+  };
+
   return (
     <div className="catalog">
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+  <div className="search-and-filter-container"> 
+  <div className="search-bar-position">
+    <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+    </div>
+    <button className="filter-button" onClick={toggleFilters}>
+      Filter
+    </button>
+  </div>
 
-      {isAnyFilterSelected() && (
-        <div className="clear-filters">
-          <button onClick={handleClearFilters}>Clear All Filters</button>
-        </div>
-      )}
+  {isAnyFilterSelected() && (
+    <div className="clear-filters">
+      <button onClick={handleClearFilters}>Clear All Filters</button>
+    </div>
+  )}
 
-      <Filters
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        selectedSize={selectedSize}
-        setSelectedSize={setSelectedSize}
-        ageRange={ageRange}
-        setAgeRange={setAgeRange}
-        selectedBreeds={selectedBreeds}
-        setSelectedBreeds={setSelectedBreeds}
-        breeds={breeds}
-      />
+  {/* Modal for Filters */}
+  {showFilters && (
+    <div className="filter-modal">
+      <div className="filter-modal-content">
+        
+        <Filters
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          selectedSize={selectedSize}
+          setSelectedSize={setSelectedSize}
+          ageRange={ageRange}
+          setAgeRange={setAgeRange}
+          selectedBreeds={selectedBreeds}
+          setSelectedBreeds={setSelectedBreeds}
+          breeds={breeds}
+        />
+      </div>
+    </div>
+  )}
 
       <SelectedBreeds
         selectedBreeds={selectedBreeds}
