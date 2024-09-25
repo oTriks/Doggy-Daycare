@@ -12,21 +12,19 @@ const sizeLabels = {
 const SelectedFilters = ({ selectedSize, ageRange, removeSize, removeAge }) => {
   return (
     <div className="selected-filters">
-      {/* Display sorted selected sizes */}
       {selectedSize.length > 0 && (
         <div className="selected-size-filters">
           {selectedSize
-            .sort((a, b) => a - b) // Sort sizes from smallest to largest
+            .sort((a, b) => a - b) 
             .map((size) => (
               <span key={size} className="selected-filter">
-                {sizeLabels[size]} {/* Display the label */}
+                {sizeLabels[size]} 
                 <button onClick={() => removeSize(size)}>x</button>
               </span>
             ))}
         </div>
       )}
 
-      {/* Display age range */}
       {(ageRange[0] !== 0 || ageRange[1] !== 16) && (
         <span className="selected-filter">
           Age: {ageRange[0]} - {ageRange[1]}

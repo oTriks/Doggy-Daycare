@@ -1,3 +1,5 @@
+/* Address.css */
+
 .address-container {
     position: fixed;  
     bottom: 10px;        
@@ -11,8 +13,8 @@
 @media (max-width: 768px) {
     .address-container {
         font-size: 0.8rem;
-        left: 10px;    /* Keep it left-aligned but adjust if necessary */
-        bottom: 10px;  /* Keep it 10px from the bottom */
-        text-align: left;  /* Maintain left alignment */
+        left: 10px;    
+        bottom: 10px;  
+        text-align: left;  
     }
 }

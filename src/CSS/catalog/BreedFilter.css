@@ -68,18 +68,18 @@
   
   @media (max-width: 768px) {
     .breed-dropdown-button {
-      width: 100%; /* Full width for mobile */
-      font-size: 12px; /* Smaller text */
-      padding: 6px; /* Adjust padding */
+      width: 100%; 
+      font-size: 12px; 
+      padding: 6px; 
     }
   
     .breed-dropdown-menu {
-      width: 100%; /* Full width for mobile */
-      max-height: 150px; /* Adjust max height for smaller screens */
+      width: 100%; 
+      max-height: 150px; 
     }
   
     .breed-option {
-      padding: 4px; /* Adjust padding */
-      font-size: 12px; /* Smaller font */
+      padding: 4px; 
+      font-size: 12px; 
     }
   }

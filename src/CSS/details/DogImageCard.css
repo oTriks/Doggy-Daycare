@@ -1,3 +1,5 @@
+/* DogImageCard.css */
+
 .dog-image-card {
     display: flex;
     flex-direction: column;
@@ -21,7 +23,6 @@
     color: #000000;
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .dog-image-card {
       margin-right: 0;

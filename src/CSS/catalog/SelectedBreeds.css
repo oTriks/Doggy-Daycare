@@ -137,12 +137,12 @@
     }
   
     .expanded-filters-content .selected-breed {
-      padding: 0px 3px; /* Smaller padding */
-      font-size: 12px; /* Smaller font */
+      padding: 0px 3px; 
+      font-size: 12px; 
     }
   
     .expanded-filters-content button {
-      font-size: 14px; /* Smaller button text */
+      font-size: 14px; 
     }
 
   }

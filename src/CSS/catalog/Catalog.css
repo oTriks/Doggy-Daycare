@@ -1,3 +1,5 @@
+/* Catalog.css */
+
 .catalog {
   display: flex;
   flex-direction: column;
@@ -17,7 +19,7 @@
 }
 
 .clear-filters-wrapper .selected-breeds-container {
-  margin: 0; /* Remove margin to align it correctly next to the button */
+  margin: 0; 
   display: flex;
   align-items: center;
 }
@@ -34,7 +36,7 @@
   color: #fff;
   border: 1px solid #776969;
   cursor: pointer;
-  margin-left: 20px; /* Space between button and selected breeds */
+  margin-left: 20px; 
 
 }
 
@@ -50,7 +52,6 @@
   position: relative;
 }
 
-/* Search bar wrapper */
 .search-bar-position {
   display: flex;
   justify-content: center;  
@@ -58,7 +59,6 @@
   margin-right: 30px;      
 }
 
-/* Filter button styles */
 .filter-button {
   padding: 10px 20px;
   background-color: #5a5a5a;
@@ -72,7 +72,6 @@
   background-color: #777777;
 }
 
-/* Filter modal styles */
 .filter-modal {
   position: fixed;
   top: 0;
@@ -114,7 +113,7 @@
 }
 
 .cancel-button {
-  background-color: #f44336; /* Red for cancel */
+  background-color: #f44336; 
 }
 
 .save-button:hover {
@@ -153,7 +152,7 @@
 
 @media (max-width: 768px) {
   .catalog {
-    padding: 10px; /* Smaller padding for mobile */
+    padding: 10px; 
   }
 
   .clear-filters {
@@ -166,13 +165,12 @@
     padding: 6px 10px;
   }
 
-  /* Stack the search bar and filter button vertically on mobile */
   .search-and-filter-container {
     flex-direction: column;
     gap: 10px;
   }
 
   .filter-button {
-    width: 100%; /* Makes the filter button full width on mobile */
+    width: 100%; 
   }
 }

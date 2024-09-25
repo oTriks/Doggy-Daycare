@@ -1,3 +1,4 @@
+/* Home.css */
 
 .full-screen-container {
     display: flex;
@@ -30,11 +31,3 @@
     
 }
 
-@media (max-width: 1400px) {
-
-    .full-screen-container {
-        min-height: 100vh;       
-
-    }
-
-}
