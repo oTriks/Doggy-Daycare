@@ -1,3 +1,5 @@
+/* AgeFilter.css */
+
 
 .filter-age {
     display: flex;
@@ -35,3 +37,9 @@
     background-color: #888;
   }
   
+  @media (max-width: 768px) {
+    .age-slider {
+      width: 300px; 
+      height: 15px; 
+    }
+  }

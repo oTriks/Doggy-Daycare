@@ -1,10 +1,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next'; 
 import '../../CSS/catalog/BreedFilter.css';
 
 const BreedFilter = ({ selectedBreeds, setSelectedBreeds, breeds }) => {
   const [breedDropdownOpen, setBreedDropdownOpen] = useState(false);
   const breedDropdownRef = useRef(null);
+  const { t } = useTranslation(); 
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -28,14 +30,14 @@ const BreedFilter = ({ selectedBreeds, setSelectedBreeds, breeds }) => {
 
   return (
     <div className="filter-breed" ref={breedDropdownRef}>
-      <label>Breed:</label>
+      <label>{t('catalog.breed')}:</label>
       <div className="breed-dropdown">
         <button
           className="breed-dropdown-button"
           onClick={() => setBreedDropdownOpen(!breedDropdownOpen)}
         >
-          {selectedBreeds.length > 0 ? `${selectedBreeds.length} selected` : 'Select Breeds'}
-        </button>
+      {selectedBreeds.length > 0 ? `${selectedBreeds.length} selected` : t('catalog.selectBreeds')}
+      </button>
         {breedDropdownOpen && (
           <div className="breed-dropdown-menu">
             {breeds.map((breed) => (

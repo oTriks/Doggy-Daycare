@@ -1,0 +1,33 @@
+/* Home.css */
+
+.full-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    position: relative;
+    overflow: hidden;     
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    padding-top: 0;
+    margin: 0;
+    position: relative;
+    flex-grow: 1;
+    height: 100vh;           
+    overflow: hidden;     
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        width: 100%;
+
+    }
+    
+}
+

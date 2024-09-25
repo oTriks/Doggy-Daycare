@@ -1,0 +1,30 @@
+/* Header.css */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #332d2d; 
+  padding: 10px 70px; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  box-sizing: border-box; 
+  z-index: 100;
+  height: 7vh;
+  border-bottom: 1px solid #ccc; 
+}
+
+.header-right {
+  display: flex; 
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto; 
+  }
+}

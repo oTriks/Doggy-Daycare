@@ -1,19 +1,23 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next'; 
 import '../../CSS/catalog/SelectedBreeds.css'; 
 
 const SelectedBreeds = ({
+  
   selectedBreeds,
   removeBreed,
   showAllFilters,
   setShowAllFilters,
 }) => {
+  const { t } = useTranslation(); 
+
   return (
     <>
       {selectedBreeds.length > 0 && (
         <div className="selected-breeds-container">
           <div className="selected-breeds" onClick={() => setShowAllFilters(true)}>
-            {selectedBreeds.slice(0, 5).map((breed, index) => (
+            {selectedBreeds.slice(0, 4).map((breed, index) => (
               <span key={index} className="selected-breed" onClick={(e) => e.stopPropagation()}>
                 {breed}{' '}
                 <button
@@ -26,7 +30,7 @@ const SelectedBreeds = ({
                 </button>
               </span>
             ))}
-            {selectedBreeds.length > 5 && <span className="ellipsis">...more</span>}
+            {selectedBreeds.length > 3 && <span className="ellipsis">...{t('catalog.more')}</span>}
           </div>
         </div>
       )}
@@ -34,7 +38,7 @@ const SelectedBreeds = ({
       {showAllFilters && (
         <div className="expanded-filters" onClick={() => setShowAllFilters(false)}>
           <div className="expanded-filters-content" onClick={(e) => e.stopPropagation()}>
-            <h3>Selected Breeds</h3>
+            <h3>{t('catalog.selectedBreeds')}</h3>
             <div className="selected-breeds expanded">
               {selectedBreeds.map((breed, index) => (
                 <span key={index} className="selected-breed">

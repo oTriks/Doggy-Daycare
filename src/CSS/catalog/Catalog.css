@@ -1,16 +1,32 @@
+/* Catalog.css */
 
 .catalog {
   display: flex;
   flex-direction: column;
   padding: 20px;
   min-height: calc(100vh - 1vh);
-  position: relative; 
+  position: relative;
 }
 
-.clear-filters {
+.clear-filters-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 20px;
   right: 20px;
+  width: auto;
+}
+
+.clear-filters-wrapper .selected-breeds-container {
+  margin: 0; 
+  display: flex;
+  align-items: center;
+}
+
+.clear-filters {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .clear-filters button {
@@ -20,8 +36,141 @@
   color: #fff;
   border: 1px solid #776969;
   cursor: pointer;
+  margin-left: 20px; 
+
 }
 
 .clear-filters button:hover {
   background-color: #5e5555;
+}
+
+.search-and-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.search-bar-position {
+  display: flex;
+  justify-content: center;  
+  max-width: 400px;
+  margin-right: 30px;      
+}
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: #5a5a5a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #777777;
+}
+
+.filter-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-modal-content {
+  background-color: #ffffffb0;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.save-button, .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #5a5a5a;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #f44336; 
+}
+
+.save-button:hover {
+  background-color: #777777;
+}
+
+.cancel-button:hover {
+  background-color: #e57373;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+
+.search-and-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.selected-filters {
+  position: absolute;
+  left: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .catalog {
+    padding: 10px; 
+  }
+
+  .clear-filters {
+    top: 10px;
+    right: 10px;
+  }
+
+  .clear-filters button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .search-and-filter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-button {
+    width: 100%; 
+  }
 }

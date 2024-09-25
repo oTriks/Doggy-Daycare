@@ -1,13 +1,15 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next'; 
 import '../../CSS/catalog/SizeFilter.css';
 
 const SizeFilter = ({ selectedSize, setSelectedSize }) => {
+  const { t } = useTranslation(); 
   return (
     <div className="filter-size">
-      <label className="filter-label">Size</label>
+      <label className="filter-label">{t('catalog.size')}</label>
       <div className="size-options-container">
-        <span className="size-label">Small</span>
+        <span className="size-label">{t('catalog.small')}</span>
         <div className="size-options">
           {[1, 2, 3, 4, 5].map((size) => (
             <button
@@ -25,7 +27,7 @@ const SizeFilter = ({ selectedSize, setSelectedSize }) => {
             </button>
           ))}
         </div>
-        <span className="size-label">Large</span>
+        <span className="size-label">{t('catalog.large')}</span>
       </div>
     </div>
   );

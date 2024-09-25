@@ -1,0 +1,39 @@
+{
+    "header": {
+      "specificInformation": "Specific Information",
+      "catalog": "Catalog",
+      "title": "Doggy Daycare"
+    },
+    "details": {
+    "fact": "Fact",
+    "sex": "Sex",
+    "breed": "Breed",
+    "size": "Size",
+    "age": "Age",
+    "present": "Present",
+    "chipNumber": "Chip Number",
+    "owner": "Owner",
+    "name": "Name",
+    "phoneNumber": "Phone Number"
+    },
+    "catalog": {
+        "size": "Size",
+        "small": "Small",
+        "large": "Large",
+        "age": "Age",
+        "years": "years",
+        "breed": "Breed",
+        "selectBreeds": "Select Breeds",
+        "selectedBreeds": "Selected Breeds",
+        "more": "more"
+
+
+    },
+    "home": {
+        "welcome": "Welcome to Doggy Daycare!",
+        "care": "We care for your pets.",
+        "address": "57 Kings Street, Helsingborg, Sweden"
+
+    }
+  }
+  

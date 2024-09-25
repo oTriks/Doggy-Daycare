@@ -1,3 +1,5 @@
+/* DogFactInfo.css */
+
 .dog-fact-info {
     display: flex;
     flex-direction: column;
@@ -16,8 +18,7 @@
     color: #ffffff;
   }
   
-  /* Responsive Design */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .dog-fact-info {
       width: 100%;
       margin-right: 0;

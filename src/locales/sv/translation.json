@@ -1,0 +1,36 @@
+{
+    "header": {
+      "specificInformation": "Specifik Information",
+      "catalog": "Katalog",
+      "title": "Doggy Daycare"
+    },
+    "details": {
+      "fact": "Fakta",
+      "sex": "Kön",
+      "breed": "Ras",
+      "size": "Storlek",
+      "age": "Ålder",
+      "present": "Närvarande",
+      "chipNumber": "Chipnummer",
+      "owner": "Ägare",
+        "name": "Namn",
+        "phoneNumber": "Mobilnummer"
+    },
+    "catalog": {
+        "size": "Storlek",
+        "small": "Liten",
+        "large": "Stor",
+        "age": "Ålder",
+        "years": "år",
+        "breed": "Ras",
+        "selectBreeds": "Välj raser",
+        "selectedBreeds": "Valda raser",
+        "more": "fler"
+    },
+    "home": {
+        "welcome": "Välkommen till Doggy Daycare!",
+        "care": "Vi tar hand om dina djur.",
+        "address": "Kungsgatan 57, Helsingborg, Sverige"
+    }
+  }
+  

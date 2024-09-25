@@ -1,12 +1,16 @@
 
 import React from 'react';
 import ReactSlider from 'react-slider';
+import { useTranslation } from 'react-i18next'; 
 import '../../CSS/catalog/AgeFilter.css';
 
 const AgeFilter = ({ ageRange, setAgeRange }) => {
+  const { t } = useTranslation(); 
+
   return (
     <div className="filter-age">
-      <label>Age: {ageRange[0]} - {ageRange[1]} years</label>
+      <label>{t('catalog.age')}: {ageRange[0]} - {ageRange[1]} {t('catalog.years')}</label>
+
       <ReactSlider
         className="age-slider"
         min={0}

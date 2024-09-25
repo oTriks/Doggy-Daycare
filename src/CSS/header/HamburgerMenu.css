@@ -1,0 +1,18 @@
+/* HamburgerMenu.css */
+
+
+.hamburger {
+    display: none; 
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: none;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; 
+    }
+  }
+  

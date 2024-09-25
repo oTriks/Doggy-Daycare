@@ -1,8 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import Filters from './Filters.jsx';
 import DogGrid from './Doggrid.jsx';
 import SelectedBreeds from './SelectedBreeds.jsx';
+import SearchBar from './SearchBar.jsx'; 
+import SelectedFilters from './SelectedFilters'; 
 import "../../CSS/catalog/Catalog.css";
 
 const Catalog = () => {
@@ -13,6 +14,11 @@ const Catalog = () => {
   const [selectedBreeds, setSelectedBreeds] = useState([]);
   const [breeds, setBreeds] = useState([]);
   const [showAllFilters, setShowAllFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(false); 
+
+  const [tempSelectedSize, setTempSelectedSize] = useState([]);
+  const [tempAgeRange, setTempAgeRange] = useState([0, 16]);
+  const [tempSelectedBreeds, setTempSelectedBreeds] = useState([]);
 
   useEffect(() => {
     fetch('https://api.jsonbin.io/v3/b/66ed5c53ad19ca34f8a985cc')
@@ -34,6 +40,10 @@ const Catalog = () => {
 
   const removeBreed = (breedToRemove) => {
     setSelectedBreeds(selectedBreeds.filter((breed) => breed !== breedToRemove));
+  };
+
+  const removeSize = (sizeToRemove) => {
+    setSelectedSize(selectedSize.filter((size) => size !== sizeToRemove));
   };
 
   const isAnyFilterSelected = () => {
@@ -62,32 +72,86 @@ const Catalog = () => {
     setSelectedBreeds([]);
   };
 
+  const toggleFilters = () => {
+    setShowFilters(!showFilters);
+    if (!showFilters) {
+      setTempSelectedSize([...selectedSize]);
+      setTempAgeRange([...ageRange]);
+      setTempSelectedBreeds([...selectedBreeds]);
+    }
+  };
+
+  const handleSaveFilters = () => {
+    setSelectedSize([...tempSelectedSize]);
+    setAgeRange([...tempAgeRange]);
+    setSelectedBreeds([...tempSelectedBreeds]);
+    setShowFilters(false);
+  };
+
+  const handleCancelFilters = () => {
+    setTempSelectedSize([]);
+    setTempAgeRange([0, 16]);
+    setTempSelectedBreeds([]);
+    setShowFilters(false);
+  };
+
   return (
     <div className="catalog">
+      <div className="search-and-filter-container">
+        <SelectedFilters 
+          selectedSize={selectedSize} 
+          ageRange={ageRange} 
+          removeSize={removeSize} // Function to remove individual size
+          removeAge={() => setAgeRange([0, 16])}
+        />
+        <div className="search-bar-position">
+          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        </div>
+        <button className="filter-button" onClick={toggleFilters}>
+          Filter
+        </button>
+      </div>
+
       {isAnyFilterSelected() && (
-        <div className="clear-filters">
-          <button onClick={handleClearFilters}>Clear All Filters</button>
+        <div className="clear-filters-wrapper">
+          <SelectedBreeds
+            selectedBreeds={selectedBreeds}
+            removeBreed={removeBreed}
+            showAllFilters={showAllFilters}
+            setShowAllFilters={setShowAllFilters}
+          />
+          <div className="clear-filters">
+            <button onClick={handleClearFilters}>Clear All Filters</button>
+          </div>
         </div>
       )}
 
-      <Filters
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        selectedSize={selectedSize}
-        setSelectedSize={setSelectedSize}
-        ageRange={ageRange}
-        setAgeRange={setAgeRange}
-        selectedBreeds={selectedBreeds}
-        setSelectedBreeds={setSelectedBreeds}
-        breeds={breeds}
-      />
-
-      <SelectedBreeds
-        selectedBreeds={selectedBreeds}
-        removeBreed={removeBreed}
-        showAllFilters={showAllFilters}
-        setShowAllFilters={setShowAllFilters}
-      />
+      {showFilters && (
+        <div className="filter-modal">
+          <div className="filter-modal-content">
+            <Filters
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              selectedSize={tempSelectedSize}
+              setSelectedSize={setTempSelectedSize}
+              ageRange={tempAgeRange}
+              setAgeRange={setTempAgeRange}
+              selectedBreeds={tempSelectedBreeds}
+              setSelectedBreeds={setTempSelectedBreeds}
+              breeds={breeds}
+            />
+            <div className="modal-actions">
+            <button className="cancel-button" onClick={handleCancelFilters}>
+                Cancel
+              </button>
+              <button className="save-button" onClick={handleSaveFilters}>
+                Save
+              </button>
+            
+            </div>
+          </div>
+        </div>
+      )}
 
       <DogGrid dogs={filteredDogs} />
     </div>
