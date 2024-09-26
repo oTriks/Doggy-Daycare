@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';  
 import '../../CSS/catalog/SearchBar.css'; 
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
+  const { t } = useTranslation();
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -10,7 +12,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Skriv hundens namn" 
+        placeholder={t('catalog.writeName')}
         value={searchQuery}
         onChange={handleSearch}
       />
