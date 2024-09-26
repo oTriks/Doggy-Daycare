@@ -60,3 +60,35 @@
       gap: 1px; 
     }
   }
+
+
+  @media (max-width: 768px) {
+    .size-box {
+        width: 30px;
+        height: 30px;
+    }
+
+    .filter-label {
+        font-size: 12px;
+    }
+
+    .size-options-container {
+        gap: 5px;
+    }
+}
+
+.size-box[data-size="small"] {
+    order: 1;
+}
+.size-box[data-size="lite-storre"] {
+    order: 2;
+}
+.size-box[data-size="medium"] {
+    order: 3;
+}
+.size-box[data-size="medelstor"] {
+    order: 4;
+}
+.size-box[data-size="stor"] {
+    order: 5;
+}

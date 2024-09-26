@@ -20,9 +20,6 @@
 
   @media (max-width: 768px) {
     .filter-section {
-      flex-direction: column; 
-      margin: 10px 0px 20px 0px;
-
-      margin-left: 0px;    
+      margin: 10px 0;
     }
   }
