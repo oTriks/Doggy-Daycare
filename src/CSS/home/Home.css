@@ -20,7 +20,8 @@
     position: relative;
     flex-grow: 1;
     height: 100vh;           
-    overflow: hidden;     
+    overflow: hidden;   
+    margin-bottom: 50px;  
 }
 
 @media (max-width: 768px) {

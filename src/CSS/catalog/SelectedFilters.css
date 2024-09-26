@@ -1,45 +1,60 @@
-/* SelectedFilters.css */
-
 .selected-filters {
-    display: flex;
-    gap: 0px;
-    align-items: center;
-    margin-right: 30px; 
-  }
-  
-  .selected-filter {
-    padding: 2px 10px;
-    background-color: rgba(253, 253, 253, 0.459);
-    color: #000;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    margin-right: 2px;
-  }
-  
-  .selected-filter button {
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 14px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .selected-filter button:hover {
-    color: red;
-  }
-  
-  @media (max-width: 768px) {
-    .selected-filters {
-        gap: 2px;
-        flex-wrap: wrap;
-        justify-content: center; 
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, minmax(20px, auto)); 
+  grid-auto-flow: column; 
+  margin-left: 20px;
+  margin-bottom: 3px;
+  gap: 3px;
+  max-width: 100%;
 
-    .selected-filter {
-        padding: 2px 5px;
-        font-size: 12px;
-    }
+}
+
+.selected-size-filters {
+  display: contents;
+}
+
+.selected-filter {
+  padding-left: 3px; 
+  padding-top: 3px;  
+  padding-bottom: 3px;
+  background-color: rgba(253, 253, 253, 0.281);
+  color: #000;
+  border: 1px solid #cccccc9f;
+  font-size: 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selected-filter button {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 10px;
+  padding: 3px;
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+.selected-filter button:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .selected-filters {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+
+  .selected-size-filters {
+    display: contents; 
+  }
+
+  .selected-filter {
+    font-size: 12px;
+    padding: 2px 5px;
+  }
 }
