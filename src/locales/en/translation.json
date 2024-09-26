@@ -32,7 +32,10 @@
         "smallMedium": "Small-medium",
         "medium": "Medium",
         "mediumLarge": "Medium-large",
-        "filter": "Filter"
+        "filter": "Filter",
+        "save": "Save",
+        "cancel": "Cancel"
+
 
 
         

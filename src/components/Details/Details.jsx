@@ -7,6 +7,20 @@ const Details = ({ dogs }) => {
   const { chipNumber } = useParams();
   const [selectedDog, setSelectedDog] = useState(null);
 
+  // Manage modal state to control `modal-active` class on the body
+  useEffect(() => {
+    if (selectedDog) {
+      document.body.classList.add('modal-active'); // Add class when modal is open
+    } else {
+      document.body.classList.remove('modal-active'); // Remove class when modal is closed
+    }
+
+    // Clean up the class when the component unmounts
+    return () => {
+      document.body.classList.remove('modal-active');
+    };
+  }, [selectedDog]);
+
   useEffect(() => {
     if (dogs.length > 0) {
       const targetDog = dogs.find((dog) => dog.chipNumber === chipNumber);

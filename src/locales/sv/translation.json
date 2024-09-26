@@ -32,7 +32,9 @@
         "smallMedium": "Liten-mellan",
         "medium": "Medium",
         "mediumLarge": "Mediumstor",
-        "filter": "Filter"
+        "filter": "Filter",
+        "save": "Spara",
+        "cancel": "Avbryt"
 
     },
     "home": {

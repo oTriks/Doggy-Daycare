@@ -2,13 +2,21 @@
 
 
 .filter-section {
-    display: flex;
-    flex-direction: column; 
-    align-items: centre;
-    margin: 0px 0px 0px 0px;
-    border-radius: 8px;
-    color: #fff;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.filter-item {
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc; /* Divider line */
+}
+
+.filter-item:last-child {
+  border-bottom: none; /* Remove divider from the last item */
+}
   
 
   @media (max-width: 1400px) {

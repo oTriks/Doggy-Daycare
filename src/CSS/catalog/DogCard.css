@@ -7,10 +7,14 @@
     border: 1px solid #300101;
     border-radius: 12px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
   }
   
+
   .dog-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); 
   }
   
   .dog-image {

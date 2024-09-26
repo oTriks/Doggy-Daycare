@@ -14,35 +14,44 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 30px;
   width: auto;
 }
 
 .clear-filters-wrapper .selected-breeds-container {
-  margin: 0; 
-  display: flex;
-  align-items: center;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, minmax(20px, auto)); 
+  grid-auto-flow: column; 
+  gap: 3px;
+  align-items: start; 
+  overflow: hidden;
 }
 
 .clear-filters {
   display: flex;
   justify-content: flex-end;
+  margin-left: 15px;
 }
 
 .clear-filters button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #776969;
-  color: #fff;
-  border: 1px solid #776969;
+  padding: 11px 18px; 
+  background-color: #cfa3a3; 
+  color: black;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-left: 20px; 
+  box-shadow: 0px 4px 6px rgba(2, 1, 1, 0.1); 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .clear-filters button:hover {
-  background-color: #5e5555;
-}
+  background-color: #bd8b8b; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); }
+
+
 
 .search-and-filter-container {
   display: flex;
@@ -50,7 +59,7 @@
   align-items: center;
   margin-bottom: 10px;
   position: relative;
-  margin-top: 10px;
+  margin-top: 15px;
 
 }
 
@@ -62,17 +71,22 @@
 }
 
 .filter-button {
-  padding: 10px 20px;
-  background-color: #5a5a5a;
-  color: white;
+  padding: 11px 24px; 
+  background-color: #cfa3a3; 
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(2, 1, 1, 0.1); 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .filter-button:hover {
-  background-color: #777777;
+  background-color: #bd8b8b; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); 
 }
+
 
 .filter-modal {
   position: fixed;
@@ -88,42 +102,58 @@
 }
 
 .filter-modal-content {
-  background-color: #ffffffb0;
+  background-color: #564A4A;
   padding: 20px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 350px;
-  height: 400px;
+  height: 450px;
   overflow-y: auto;
+  border: 1px solid #000000; 
+  position: relative; 
 }
 
+
 .modal-actions {
+  position: absolute;
+  bottom: 10px; 
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: space-between; 
 }
 
 .save-button, .cancel-button {
-  padding: 10px 20px;
+  padding: 11px 18px; 
+  background-color: #cfa3a3; 
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #5a5a5a;
-  color: white;
+  box-shadow: 0px 4px 6px rgba(2, 1, 1, 0.1); 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.save-button {
+  margin-right: 15px; 
 }
 
 .cancel-button {
-  background-color: #f44336; 
+  margin-left: 15px; 
 }
 
 .save-button:hover {
-  background-color: #777777;
+  background-color: #69b667; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .cancel-button:hover {
-  background-color: #e57373;
+  background-color: #bb5a5a; 
+  transform: translateY(-3px); 
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .close-button {

@@ -4,18 +4,20 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-right: 20px;
+    margin-left: 40px;
   }
   
   .dog-fact-info h4 {
     margin-top: 15px;
     margin-bottom: 5px;
-    color: #110101;
+    color: #ffffff;
+    font-size: 22px;
   }
   
   .dog-fact-info p {
     margin: 5px 0;
     color: #ffffff;
+    font-size: 16px;
   }
   
   @media (max-width: 768px) {
