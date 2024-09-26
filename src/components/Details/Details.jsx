@@ -3,35 +3,23 @@ import { useParams } from 'react-router-dom';
 import DogDetailsCard from './DogDetailsCard';
 import '../../CSS/details/Details.css'; 
 
-const Details = () => {
-  const { chipNumber } = useParams(); 
-  const [dogs, setDogs] = useState([]);
-  const [selectedDog, setSelectedDog] = useState(null); 
+const Details = ({ dogs }) => {
+  const { chipNumber } = useParams();
+  const [selectedDog, setSelectedDog] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.jsonbin.io/v3/b/66ed5c53ad19ca34f8a985cc')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        const dogsArray = data.record;
-        const sortedDogs = dogsArray.sort((a, b) => a.name.localeCompare(b.name));
-        setDogs(sortedDogs);
-        const targetDog = sortedDogs.find(dog => dog.chipNumber === chipNumber);
-        setSelectedDog(targetDog);
-      })
-      .catch((error) => console.error('Error fetching dog data:', error));
-  }, [chipNumber]);
+    if (dogs.length > 0) {
+      const targetDog = dogs.find((dog) => dog.chipNumber === chipNumber);
+      setSelectedDog(targetDog);
+    }
+  }, [chipNumber, dogs]);
 
   const handleOpenModal = (dog) => {
-    setSelectedDog(dog); 
+    setSelectedDog(dog);
   };
 
   const handleCloseModal = () => {
-    setSelectedDog(null); 
+    setSelectedDog(null);
   };
 
   return (
@@ -42,7 +30,7 @@ const Details = () => {
             key={dog.chipNumber}
             dog={dog}
             isTarget={dog.chipNumber === chipNumber}
-            onOpen={handleOpenModal} 
+            onOpen={handleOpenModal}
           />
         ))}
       </div>

@@ -46,7 +46,7 @@ const SelectedBreeds = ({
                 </span>
               ))}
             </div>
-            <button onClick={() => setShowAllFilters(false)}>Close</button>
+            <button onClick={() => setShowAllFilters(false)}>{t('catalog.close')}</button>
           </div>
         </div>
       )}

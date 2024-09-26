@@ -25,15 +25,28 @@
         "breed": "Breed",
         "selectBreeds": "Select Breeds",
         "selectedBreeds": "Selected Breeds",
-        "more": "more"
+        "more": "more",
+        "clearAllFilters": "Clear All Filters",
+        "writeName": "Enter the dog's name",
+        "close": "Close",
+        "smallMedium": "Small-medium",
+        "medium": "Medium",
+        "mediumLarge": "Medium-large",
+        "filter": "Filter"
 
 
+        
+
+      
+        
     },
     "home": {
         "welcome": "Welcome to Doggy Daycare!",
         "care": "We care for your pets.",
         "address": "57 Kings Street, Helsingborg, Sweden"
 
-    }
+    } 
+
+    
   }
   

@@ -25,12 +25,21 @@
         "breed": "Ras",
         "selectBreeds": "Välj raser",
         "selectedBreeds": "Valda raser",
-        "more": "fler"
+        "more": "fler",
+        "clearAllFilters": "Rensa Filter",
+        "writeName": "Skriv hundens namn",
+        "close": "Stäng",
+        "smallMedium": "Liten-mellan",
+        "medium": "Medium",
+        "mediumLarge": "Mediumstor",
+        "filter": "Filter"
+
     },
     "home": {
         "welcome": "Välkommen till Doggy Daycare!",
         "care": "Vi tar hand om dina djur.",
         "address": "Kungsgatan 57, Helsingborg, Sverige"
     }
+
   }
   
