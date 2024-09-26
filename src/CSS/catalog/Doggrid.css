@@ -5,8 +5,10 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
   gap: 20px;
   justify-content: center;
-  padding: 0 10px; 
   box-sizing: border-box; 
+  margin-left: 5px;
+  margin-right: 10px;
+
 }
 
 @media (max-width: 1400px) {
@@ -20,7 +22,5 @@
 @media (max-width: 768px) {
   .dog-grid {
     grid-template-columns: repeat(3, 1fr); 
-    gap: 5px; 
-    padding: 0 5px; 
   }
 }

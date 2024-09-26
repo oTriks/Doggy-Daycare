@@ -31,3 +31,15 @@
     color: red;
   }
   
+  @media (max-width: 768px) {
+    .selected-filters {
+        gap: 2px;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .selected-filter {
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+}

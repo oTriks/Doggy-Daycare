@@ -36,13 +36,14 @@
 
   @media (max-width: 768px) {
     .dog-card {
-      width: 130px; 
+      width: 110px;
     }
+  
     .dog-image {
-      width: 130px; 
-      height: 100px; 
+      width: 110px;
     }
+  
     .dog-card h3 {
-      font-size: 0.8rem; 
+      font-size: 0.8rem;
     }
   }

@@ -14,4 +14,27 @@
   }
   
  
-  
+  @media (max-width: 768px) {
+    .selected-filters {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 5px;
+        align-items: center;
+        margin-right: 10px; 
+      }
+      
+      .selected-filter {
+        padding: 5px;
+        font-size: 12px;
+      }
+      
+      .selected-filter button {
+        font-size: 12px;
+      }
+      .search-bar {
+        margin-left: 20px;
+        margin-top: 10px;    
+        max-width: 150px;
+        
+      }
+  }
