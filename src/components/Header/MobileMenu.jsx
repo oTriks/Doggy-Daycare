@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
+import LanguageSwitcher from './LanguageSwitcher'; 
 import '../../CSS/header/MobileMenu.css'; 
 
 const MobileMenu = ({ isOpen, closeMenu }) => {
@@ -16,7 +15,7 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       <Link to="/catalog" className="mobile-nav-link" onClick={closeMenu}>
         {t('header.catalog')}
       </Link>
-      <LanguageSwitcher />
+      <LanguageSwitcher />  
     </div>
   );
 };

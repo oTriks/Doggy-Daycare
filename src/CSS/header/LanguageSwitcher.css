@@ -1,19 +1,30 @@
 /* LanguageSwitcher.css */
 
 .language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 25px;
+  height: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header .language-switcher {
+    display: none;
+  }
+  
+  .mobile-menu .language-switcher {
     display: flex;
-    align-items: center;
   }
-  
+
   .flag {
-    width: 25px;
-    height: 15px;
-    margin-left: 10px;
-    cursor: pointer; 
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .language-switcher {
-      display: none;
-    }
-  }
+
+}

@@ -9,12 +9,12 @@ const NavigationLinks = ({ closeMenu }) => {
 
   return (
     <div className="navigation-links">
-      <Link to="/details" className="nav-link" onClick={closeMenu}>
-        {t('header.specificInformation')}
-      </Link>
-      <span className="divider"></span>
       <Link to="/catalog" className="nav-link" onClick={closeMenu}>
         {t('header.catalog')}
+      </Link>
+      <span className="divider"></span>
+      <Link to="/details" className="nav-link" onClick={closeMenu}>
+        {t('header.specificInformation')}
       </Link>
     </div>
   );
