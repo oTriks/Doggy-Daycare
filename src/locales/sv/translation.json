@@ -31,8 +31,8 @@
         "close": "Stäng",
         "smallMedium": "Liten-mellan",
         "medium": "Medium",
-        "mediumLarge": "Mediumstor"
-
+        "mediumLarge": "Mediumstor",
+        "filter": "Filter"
 
     },
     "home": {
