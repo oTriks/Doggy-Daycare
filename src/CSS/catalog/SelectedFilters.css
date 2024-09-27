@@ -47,7 +47,7 @@
   color: red;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .selected-filters {
     gap: 2px;
     margin-left: 0px; 

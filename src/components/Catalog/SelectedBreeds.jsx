@@ -10,10 +10,12 @@ const SelectedBreeds = ({
 }) => {
   const { t } = useTranslation(); 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isBelow900, setIsBelow900] = useState(window.innerWidth <= 900); 
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
+      setIsBelow900(window.innerWidth <= 900); 
     };
     
     window.addEventListener('resize', handleResize);
@@ -23,7 +25,7 @@ const SelectedBreeds = ({
     };
   }, []);
 
-  const sliceLimit = isMobile ? 5 : 8;
+  const sliceLimit = isMobile ? 5 : isBelow900 ? 6 : 8; 
 
   return (
     <>

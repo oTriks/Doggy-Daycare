@@ -9,16 +9,26 @@
   padding: 0 20px; 
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 900px) {
   .dog-grid {
-    grid-template-columns: repeat(3, minmax(170px, 1fr)); 
-    gap: 15px;
+    grid-template-columns: repeat(3, minmax(120px, 1fr)); 
+    gap: 10px;
+    margin-right: 0px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .dog-grid {
-    grid-template-columns: repeat(3, minmax(110px, 1fr)); 
+    grid-template-columns: repeat(5, minmax(120px, 1fr)); 
+    gap: 10px;
+    margin-right: 0px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .dog-grid {
+    grid-template-columns: repeat(3, minmax(120px, 1fr)); 
     gap: 10px;
     margin-right: 0px;
   }

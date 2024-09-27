@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactSlider from 'react-slider';
 import { useTranslation } from 'react-i18next'; 
@@ -20,7 +19,9 @@ const AgeFilter = ({ ageRange, setAgeRange }) => {
         withTracks
         pearling
         minDistance={1}
-        renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
+        renderThumb={(props, state) => (
+          <div {...props}>{state.valueNow}</div>
+        )}
       />
     </div>
   );

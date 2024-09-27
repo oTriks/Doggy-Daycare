@@ -46,23 +46,8 @@
     background-color: #bd8b8b;
   }
   
-  @media (max-width: 768px) {
-    .size-box {
-      width: 30px; 
-      height: 30px;
-    }
-  
-    .filter-label {
-      font-size: 12px; 
-    }
-  
-    .size-options-container {
-      gap: 1px; 
-    }
-  }
-
-
-  @media (max-width: 768px) {
+ 
+  @media (max-width: 760px) {
     .size-box {
         width: 30px;
         height: 30px;

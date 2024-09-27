@@ -7,15 +7,13 @@ const Details = ({ dogs }) => {
   const { chipNumber } = useParams();
   const [selectedDog, setSelectedDog] = useState(null);
 
-  // Manage modal state to control `modal-active` class on the body
   useEffect(() => {
     if (selectedDog) {
-      document.body.classList.add('modal-active'); // Add class when modal is open
+      document.body.classList.add('modal-active'); 
     } else {
-      document.body.classList.remove('modal-active'); // Remove class when modal is closed
+      document.body.classList.remove('modal-active');
     }
 
-    // Clean up the class when the component unmounts
     return () => {
       document.body.classList.remove('modal-active');
     };

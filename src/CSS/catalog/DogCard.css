@@ -27,24 +27,30 @@
   .dog-card h3 {
     margin: 10px;
   }
-  
-  @media (max-width: 1400px) {
+
+  @media (max-width: 800px) {
     .dog-card {
-      width: 170px; 
+      width: 110px;
     }
+  
     .dog-image {
-      width: 170px; 
-      height: 100px; 
+      width: 110px;
+      height: 100px;
+    }
+  
+    .dog-card h3 {
+      font-size: 0.8rem;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 760px) {
     .dog-card {
       width: 110px;
     }
   
     .dog-image {
       width: 110px;
+      height: 100px;
     }
   
     .dog-card h3 {
