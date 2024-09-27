@@ -20,5 +20,17 @@
   .dog-grid {
     grid-template-columns: repeat(3, minmax(110px, 1fr)); 
     gap: 10px;
+    margin-right: 0px;
+  }
+
+  
+  .dog-grid.filtered .dog-card:nth-child(1) {
+    grid-column: span 3; 
+  }
+
+  
+  .dog-grid.filtered .dog-card:nth-child(n+2) {
+    grid-column: auto; 
   }
 }
+

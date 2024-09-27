@@ -19,17 +19,14 @@ const Catalog = ({ dogs, breeds }) => {
   const [tempAgeRange, setTempAgeRange] = useState([0, 16]);
   const [tempSelectedBreeds, setTempSelectedBreeds] = useState([]);
 
-  // Function to remove a selected breed
   const removeBreed = (breedToRemove) => {
     setSelectedBreeds(selectedBreeds.filter((breed) => breed !== breedToRemove));
   };
 
-  // Function to remove a selected size
   const removeSize = (sizeToRemove) => {
     setSelectedSize(selectedSize.filter((size) => size !== sizeToRemove));
   };
 
-  // Only activate invisible container if size, age, or breed filters are selected (excluding search query)
   const isFilterActive = () => {
     return (
       selectedSize.length > 0 ||
@@ -93,32 +90,23 @@ const Catalog = ({ dogs, breeds }) => {
           {t('catalog.filter')}
         </button>
       </div>
-
-      {/* Invisible container that becomes visible when filters other than search are selected */}
-      <div className={`invisible-container ${isFilterActive() ? 'active' : ''}`}>
-        <div className="selected-filters-wrapper">
-          <SelectedFilters
-            selectedSize={selectedSize}
-            ageRange={ageRange}
-            removeSize={removeSize}
-            removeAge={() => setAgeRange([0, 16])}
-          />
-        </div>
-      </div>
-
+    
       {isFilterActive() && (
-        <div className="clear-filters-wrapper">
-          <SelectedBreeds
-            selectedBreeds={selectedBreeds}
-            removeBreed={removeBreed}
-            showAllFilters={showAllFilters}
-            setShowAllFilters={setShowAllFilters}
-          />
-          <div className="clear-filters">
-            <button onClick={handleClearFilters}>{t('catalog.clearAllFilters')}</button>
-          </div>
-        </div>
-      )}
+  <>
+  
+    <div className="clear-filters-wrapper">
+      <SelectedBreeds
+        selectedBreeds={selectedBreeds}
+        removeBreed={removeBreed}
+        showAllFilters={showAllFilters}
+        setShowAllFilters={setShowAllFilters}
+      />
+    </div>
+    <div className="clear-filters">
+      <button onClick={handleClearFilters}>{t('catalog.clearAllFilters')}</button>
+    </div>
+  </>
+)}
 
       {showFilters && (
         <div className="filter-modal">
@@ -146,7 +134,7 @@ const Catalog = ({ dogs, breeds }) => {
         </div>
       )}
 
-      <DogGrid dogs={filteredDogs} />
+      <DogGrid dogs={filteredDogs} isFilterActive={isFilterActive()} />
     </div>
   );
 };

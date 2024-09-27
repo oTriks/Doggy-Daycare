@@ -1,23 +1,36 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next'; 
 import '../../CSS/catalog/SelectedBreeds.css'; 
 
 const SelectedBreeds = ({
-  
   selectedBreeds,
   removeBreed,
   showAllFilters,
   setShowAllFilters,
 }) => {
   const { t } = useTranslation(); 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const sliceLimit = isMobile ? 5 : 8;
 
   return (
     <>
       {selectedBreeds.length > 0 && (
         <div className="selected-breeds-container">
           <div className="selected-breeds" onClick={() => setShowAllFilters(true)}>
-            {selectedBreeds.slice(0, 8).map((breed, index) => (
+            {selectedBreeds.slice(0, sliceLimit).map((breed, index) => (
               <span key={index} className="selected-breed" onClick={(e) => e.stopPropagation()}>
                 {breed}{' '}
                 <button
@@ -30,7 +43,7 @@ const SelectedBreeds = ({
                 </button>
               </span>
             ))}
-            {selectedBreeds.length > 8 && <span className="ellipsis">...{t('catalog.more')}</span>}
+            {selectedBreeds.length > sliceLimit && <span className="ellipsis">...{t('catalog.more')}</span>}
           </div>
         </div>
       )}

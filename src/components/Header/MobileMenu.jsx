@@ -9,11 +9,11 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
 
   return (
     <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
-      <Link to="/details" className="mobile-nav-link" onClick={closeMenu}>
-        {t('header.specificInformation')}
-      </Link>
       <Link to="/catalog" className="mobile-nav-link" onClick={closeMenu}>
         {t('header.catalog')}
+      </Link>
+      <Link to="/details" className="mobile-nav-link" onClick={closeMenu}>
+        {t('header.specificInformation')}
       </Link>
       <LanguageSwitcher />  
     </div>
