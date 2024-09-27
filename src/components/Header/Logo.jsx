@@ -10,7 +10,7 @@ const Logo = () => {
   return (
     <div className="logo">
       <Link to="/" className="logo-link">
-        <img src="/assets/dogLogo.png" alt="Doggy Daycare Icon" className="logo-icon" />
+        <img src="/Doggy-Daycare/assets/dogLogo.png" alt="Doggy Daycare Icon" className="logo-icon" />
         <h1 className="logo-title">{t('header.title')}</h1>
       </Link>
     </div>

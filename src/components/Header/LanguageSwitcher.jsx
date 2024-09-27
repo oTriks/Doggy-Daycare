@@ -14,14 +14,14 @@ const LanguageSwitcher = () => {
   return (
     <div className="language-switcher">
       <img 
-        src="/assets/SWE.png" 
+        src="/Doggy-Daycare/assets/SWE.png" 
         alt="Swedish Flag" 
         className="flag" 
         onClick={() => changeLanguage('sv')} 
         style={{ cursor: 'pointer' }}
       />
       <img 
-        src="/assets/US.png" 
+        src="/Doggy-Daycare/assets/US.png" 
         alt="American Flag" 
         className="flag" 
         onClick={() => changeLanguage('en')} 
