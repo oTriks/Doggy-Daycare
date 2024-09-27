@@ -2,7 +2,9 @@
 
 .search-bar {
     text-align: center;
-    
+    background-color: white; 
+    border-radius: 8px;
+
   }
   
   .search-bar input {
