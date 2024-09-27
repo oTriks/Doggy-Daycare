@@ -68,6 +68,10 @@
 }
 
 body.modal-active {
+  overflow: hidden;
+}
+
+body.modal-active .dog-list {
   filter: blur(5px);
 }
 
