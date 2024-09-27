@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Filters from './Filters.jsx';
 import DogGrid from './Doggrid.jsx';
-import { useTranslation } from 'react-i18next';  
+import { useTranslation } from 'react-i18next';
 import SelectedBreeds from './SelectedBreeds.jsx';
-import SearchBar from './SearchBar.jsx'; 
-import SelectedFilters from './SelectedFilters'; 
-import "../../CSS/catalog/Catalog.css";
+import SearchBar from './SearchBar.jsx';
+import SelectedFilters from './SelectedFilters';
+import '../../CSS/catalog/Catalog.css';
 
 const Catalog = ({ dogs, breeds }) => {
   const { t } = useTranslation();
@@ -14,22 +14,24 @@ const Catalog = ({ dogs, breeds }) => {
   const [ageRange, setAgeRange] = useState([0, 16]);
   const [selectedBreeds, setSelectedBreeds] = useState([]);
   const [showAllFilters, setShowAllFilters] = useState(false);
-  const [showFilters, setShowFilters] = useState(false); 
+  const [showFilters, setShowFilters] = useState(false);
   const [tempSelectedSize, setTempSelectedSize] = useState([]);
   const [tempAgeRange, setTempAgeRange] = useState([0, 16]);
   const [tempSelectedBreeds, setTempSelectedBreeds] = useState([]);
 
+  // Function to remove a selected breed
   const removeBreed = (breedToRemove) => {
     setSelectedBreeds(selectedBreeds.filter((breed) => breed !== breedToRemove));
   };
 
+  // Function to remove a selected size
   const removeSize = (sizeToRemove) => {
     setSelectedSize(selectedSize.filter((size) => size !== sizeToRemove));
   };
 
-  const isAnyFilterSelected = () => {
+  // Only activate invisible container if size, age, or breed filters are selected (excluding search query)
+  const isFilterActive = () => {
     return (
-      searchQuery !== '' ||
       selectedSize.length > 0 ||
       ageRange[0] !== 0 ||
       ageRange[1] !== 16 ||
@@ -78,10 +80,10 @@ const Catalog = ({ dogs, breeds }) => {
   return (
     <div className="catalog">
       <div className="search-and-filter-container">
-        <SelectedFilters 
-          selectedSize={selectedSize} 
-          ageRange={ageRange} 
-          removeSize={removeSize} 
+        <SelectedFilters
+          selectedSize={selectedSize}
+          ageRange={ageRange}
+          removeSize={removeSize}
           removeAge={() => setAgeRange([0, 16])}
         />
         <div className="search-bar-position">
@@ -92,7 +94,19 @@ const Catalog = ({ dogs, breeds }) => {
         </button>
       </div>
 
-      {isAnyFilterSelected() && (
+      {/* Invisible container that becomes visible when filters other than search are selected */}
+      <div className={`invisible-container ${isFilterActive() ? 'active' : ''}`}>
+        <div className="selected-filters-wrapper">
+          <SelectedFilters
+            selectedSize={selectedSize}
+            ageRange={ageRange}
+            removeSize={removeSize}
+            removeAge={() => setAgeRange([0, 16])}
+          />
+        </div>
+      </div>
+
+      {isFilterActive() && (
         <div className="clear-filters-wrapper">
           <SelectedBreeds
             selectedBreeds={selectedBreeds}
