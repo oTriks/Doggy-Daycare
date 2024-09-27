@@ -92,18 +92,21 @@ const Catalog = ({ dogs, breeds }) => {
       </div>
     
       {isFilterActive() && (
-        <div className="clear-filters-wrapper">
-          <SelectedBreeds
-            selectedBreeds={selectedBreeds}
-            removeBreed={removeBreed}
-            showAllFilters={showAllFilters}
-            setShowAllFilters={setShowAllFilters}
-          />
-          <div className="clear-filters">
-            <button onClick={handleClearFilters}>{t('catalog.clearAllFilters')}</button>
-          </div>
-        </div>
-      )}
+  <>
+  
+    <div className="clear-filters-wrapper">
+      <SelectedBreeds
+        selectedBreeds={selectedBreeds}
+        removeBreed={removeBreed}
+        showAllFilters={showAllFilters}
+        setShowAllFilters={setShowAllFilters}
+      />
+    </div>
+    <div className="clear-filters">
+      <button onClick={handleClearFilters}>{t('catalog.clearAllFilters')}</button>
+    </div>
+  </>
+)}
 
       {showFilters && (
         <div className="filter-modal">
@@ -131,7 +134,7 @@ const Catalog = ({ dogs, breeds }) => {
         </div>
       )}
 
-      <DogGrid dogs={filteredDogs} />
+      <DogGrid dogs={filteredDogs} isFilterActive={isFilterActive()} />
     </div>
   );
 };

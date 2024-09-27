@@ -11,7 +11,6 @@ const SelectedBreeds = ({
   const { t } = useTranslation(); 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Effect to update mobile status on window resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
