@@ -5,8 +5,8 @@ import '../../CSS/home/HomeImage.css';
 const HomeImage = () => {
   return (
     <div className="home-image-container">
-      <img src="/assets/dogHome.png" alt="Home Dog" className="home-dog-image" />
-    </div>
+      <img src={`${import.meta.env.BASE_URL}assets/dogHome.png`} alt="Home Dog" className="home-dog-image" />
+      </div>
   );
 };
 
