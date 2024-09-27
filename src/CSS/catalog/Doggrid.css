@@ -20,5 +20,6 @@
   .dog-grid {
     grid-template-columns: repeat(3, minmax(110px, 1fr)); 
     gap: 10px;
+    margin-right: 0px;
   }
 }
