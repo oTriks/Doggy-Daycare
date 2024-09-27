@@ -26,6 +26,7 @@
   
   .dog-card h3 {
     margin: 10px;
+    color: black; 
   }
 
   @media (max-width: 800px) {
