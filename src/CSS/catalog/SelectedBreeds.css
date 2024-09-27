@@ -118,7 +118,6 @@
 
 }
 
-
 .breed-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -133,7 +132,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
+
+
+
+@media (max-width: 760px) {
   .selected-breeds-container {
     display: grid;
     grid-template-columns: 1fr; 
@@ -141,14 +143,11 @@
     gap: 5px;    
   }
 
-  
-
   .selected-breed {
     font-size: 12px;
     padding: 2px 5px;
     height: 13px;
     width: 90px;
-
   }
 
   .ellipsis {
@@ -164,7 +163,6 @@
   .expanded-filters-content .selected-breed {
     padding: 0px 3px;
     font-size: 12px;
-
   }
 
   .ellipsis {

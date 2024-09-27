@@ -182,8 +182,38 @@
 }
 
 
+@media (max-width: 1400px) {
+  .search-and-filter-container {
+    margin-right: 80px;
+  }
+  .clear-filters-wrapper {
+    position: absolute;
+    right: 0;
+    margin-right: 150px;
+}
 
-@media (max-width: 768px) {
+}
+
+@media (max-width: 900px) {
+  .catalog {
+    padding: 5px;
+  }
+
+  .search-and-filter-container {
+    margin-top: 70px;
+  }
+ 
+  .clear-filters{
+    margin-top: 5px;
+  }
+  .selected-filters {
+    margin-bottom: 125px;
+  }
+}
+
+
+
+@media (max-width: 760px) {
   .catalog {
     padding: 5px;
   }
@@ -237,8 +267,5 @@
   .clear-filters{
     margin-top: 5px;
   }
-  
-  
-  
  
 }

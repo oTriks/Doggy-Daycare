@@ -78,7 +78,7 @@
   color: green;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .breed-dropdown-button {
     font-size: 12px;
     padding: 6px;
