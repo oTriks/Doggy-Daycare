@@ -7,17 +7,6 @@ const Details = ({ dogs }) => {
   const { chipNumber } = useParams();
   const [selectedDog, setSelectedDog] = useState(null);
 
-  useEffect(() => {
-    if (selectedDog) {
-      document.body.classList.add('modal-active'); 
-    } else {
-      document.body.classList.remove('modal-active');
-    }
-
-    return () => {
-      document.body.classList.remove('modal-active');
-    };
-  }, [selectedDog]);
 
   useEffect(() => {
     if (dogs.length > 0) {
